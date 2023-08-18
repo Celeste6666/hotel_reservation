@@ -3,7 +3,7 @@ import type { ThemeConfig } from "antd";
 
 const cus_theme: ThemeConfig = {
   token: {
-    fontSize: 16,
+    fontSize: 40,
     colorPrimary: "#3a6ac3",
     colorError: "#f46a6a",
     colorSuccess: "#eeea78",
