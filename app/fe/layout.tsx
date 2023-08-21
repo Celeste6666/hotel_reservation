@@ -14,7 +14,6 @@ export default function RootLayout({
 }) {
   return (
     <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <NavbarLayout />

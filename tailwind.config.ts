@@ -21,8 +21,8 @@ const config: Config = {
     themes: [
       {
         hotel: {
-          primary: "#3a6ac3",
-          secondary: "#f46a6a",
+          primary: "#1660c4",
+          secondary: "#99c7ea",
           accent: "#1dcdbc",
           neutral: "#2b3440",
           "base-100": "#ffffff",
