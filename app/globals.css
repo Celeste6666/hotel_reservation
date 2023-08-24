@@ -1,12 +1,14 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb      : 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb  : 255, 255, 255;
-  --font-base-size      : 18px
+  --font-base-size      : 20px
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,10 +19,39 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-  font-size: var(--font-base-size);
+@layer base {
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    font-size  : var(--font-base-size);
+    font-family: 'cwTeXYen', sans-serif;
+  }
+}
+
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+@layer components {
+  .nav-link {
+    @apply h-full px-3 py-5 hover:bg-transparent hover:border-b-4 hover:border-secondary;
+  }
+
+  .arrowMove {
+    animation: arrowMove 3s ease-in-out 0s infinite;
+  }
 }

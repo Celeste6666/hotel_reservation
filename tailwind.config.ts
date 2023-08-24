@@ -7,6 +7,7 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -22,7 +23,7 @@ const config: Config = {
       {
         hotel: {
           primary: "#1660c4",
-          secondary: "#99c7ea",
+          secondary: "#eec41e",
           accent: "#1dcdbc",
           neutral: "#2b3440",
           "base-100": "#ffffff",

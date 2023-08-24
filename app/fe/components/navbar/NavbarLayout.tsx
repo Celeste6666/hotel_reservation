@@ -1,7 +1,9 @@
+import Image from "next/image";
 import NavbarContent from "./NavbarContent";
+import Logo from "@/assets/logo.png";
 export default function NavbarLayout() {
   return (
-    <div className="w-full navbar bg-white drop-shadow-md">
+    <div className="w-full navbar bg-white py-0">
       <div className="flex-none lg:hidden">
         <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
           <svg
@@ -21,7 +23,8 @@ export default function NavbarLayout() {
       </div>
 
       <div className="navbar-start w-2/5">
-        <a className="btn btn-ghost normal-case text-xl">馬祖民宿網</a>
+        <Image src={Logo} width={60} height={60} alt="LOGO" />
+        {/* <a className="btn btn-ghost normal-case text-xl">馬祖旅行網</a> */}
       </div>
       <NavbarContent />
     </div>

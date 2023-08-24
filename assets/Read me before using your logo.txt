@@ -1,0 +1,7 @@
+欲免費使用此標誌，您必須透過社群媒體、部落格或網站分享DesignEvo並給予正面評價。
+
+1. 在您的網站(如Facebook、Twitter、Google+、LinkedIn等)上分享www.designevo.com。
+
+2. 在您的部落格或網站分享www.designevo.com，或直接複製以下代碼並貼在您的網站。
+
+ <div>由<a href="https://www.designevo.com/tw/" title="免費的線上標誌製做器">DesignEvo</a>製作的標誌</div>

@@ -13,15 +13,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="drawer">
-      <div className="drawer-content flex flex-col">
+    <>
+      <div className="flex flex-col py-0">
         {/* Navbar */}
         <NavbarLayout />
-        {/* Page content here */}
-        {children}
+        {/* SideBar */}
+        <SideBar />
       </div>
-      {/* SideBar */}
-      <SideBar />
-    </div>
+      {/* Page content here */}
+      {children}
+    </>
   );
 }
