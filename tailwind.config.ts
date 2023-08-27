@@ -23,7 +23,7 @@ const config: Config = {
       {
         hotel: {
           primary: "#1660c4",
-          secondary: "#eec41e",
+          secondary: "#F5C300",
           accent: "#1dcdbc",
           neutral: "#2b3440",
           "base-100": "#ffffff",
