@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Banner from "@/assets/banner.jpg";
-import Location from "@FE/components/home/Location";
-import Recommend from "@FE/components/home/Recommend";
+import Location from "@/app/fe/(home)/Location";
+import Recommend from "@FE/(home)/Recommend";
+import Gallary from "@FE/(home)/Gallary";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
@@ -29,9 +30,10 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="container px-12  md:px-24 ">
+      <div>
         <Location list={[]} />
         <Recommend />
+        <Gallary />
       </div>
     </main>
   );
