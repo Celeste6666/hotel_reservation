@@ -22,14 +22,14 @@ const config: Config = {
     themes: [
       {
         hotel: {
-          primary: "#1660c4",
-          secondary: "#F5C300",
+          primary: "#EEC41E",
+          secondary: "#2f4f4f",
           accent: "#1dcdbc",
           neutral: "#2b3440",
           "base-100": "#ffffff",
-          info: "#eeea78",
-          success: "#a378e0",
-          warning: "#dc9e6b",
+          info: "#15486d",
+          success: "#2f4f4f",
+          warning: "#cd5a35",
           error: "#f46a6a",
         },
       },

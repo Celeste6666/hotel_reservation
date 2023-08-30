@@ -23,7 +23,7 @@ const Recommend = ({ list }: Props) => {
         <p className="w-25 text-slate-500">多種小島風情供您挑選</p>
       </div>
       <div className="home-card-group">
-        <div className="group card rounded bg-base-100 shadow-md hover:bg-secondary">
+        <div className="group card rounded bg-base-100 shadow-md hover:bg-primary">
           <figure>
             <Image src={fakeImage} alt="Shoes" className="w-full h-full" />
           </figure>
@@ -34,11 +34,11 @@ const Recommend = ({ list }: Props) => {
               <button
                 className="btn btn-circle
               btn-outline
-              bg-secondary
+              bg-primary
               text-white
               group-hover:bg-white
-              group-hover:text-secondary
-              hover:bg-secondary
+              group-hover:text-primary
+              hover:bg-primary
               hover:border-0"
               >
                 <ChevronRightIcon className="w-8 h-8" />
@@ -46,7 +46,7 @@ const Recommend = ({ list }: Props) => {
             </div>
           </div>
         </div>
-        <div className="group card rounded bg-base-100 shadow-md hover:bg-secondary">
+        <div className="group card rounded bg-base-100 shadow-md hover:bg-primary">
           <figure>
             <Image src={fakeImage} alt="Shoes" className="w-full h-full" />
           </figure>
@@ -57,11 +57,11 @@ const Recommend = ({ list }: Props) => {
               <button
                 className="btn btn-circle
               btn-outline
-              bg-secondary
+              bg-primary
               text-white
               group-hover:bg-white
-              group-hover:text-secondary
-              hover:bg-secondary
+              group-hover:text-primary
+              hover:bg-primary
               hover:border-0"
               >
                 <ChevronRightIcon className="w-8 h-8" />
@@ -69,7 +69,7 @@ const Recommend = ({ list }: Props) => {
             </div>
           </div>
         </div>
-        <div className="group card rounded bg-base-100 shadow-md hover:bg-secondary">
+        <div className="group card rounded bg-base-100 shadow-md hover:bg-primary">
           <figure>
             <Image src={fakeImage} alt="Shoes" className="w-full h-full" />
           </figure>
@@ -80,11 +80,11 @@ const Recommend = ({ list }: Props) => {
               <button
                 className="btn btn-circle
               btn-outline
-              bg-secondary
+              bg-primary
               text-white
               group-hover:bg-white
-              group-hover:text-secondary
-              hover:bg-secondary
+              group-hover:text-primary
+              hover:bg-primary
               hover:border-0"
               >
                 <ChevronRightIcon className="w-8 h-8" />
@@ -92,7 +92,7 @@ const Recommend = ({ list }: Props) => {
             </div>
           </div>
         </div>
-        <div className="group card rounded bg-base-100 shadow-md hover:bg-secondary">
+        <div className="group card rounded bg-base-100 shadow-md hover:bg-primary">
           <figure>
             <Image src={fakeImage} alt="Shoes" className="w-full h-full" />
           </figure>
@@ -103,11 +103,11 @@ const Recommend = ({ list }: Props) => {
               <button
                 className="btn btn-circle
               btn-outline
-              bg-secondary
+              bg-primary
               text-white
               group-hover:bg-white
-              group-hover:text-secondary
-              hover:bg-secondary
+              group-hover:text-primary
+              hover:bg-primary
               hover:border-0"
               >
                 <ChevronRightIcon className="w-8 h-8" />

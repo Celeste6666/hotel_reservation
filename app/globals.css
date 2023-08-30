@@ -11,13 +11,13 @@
   --font-base-size      : 20px
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb      : 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb  : 0, 0, 0;
   }
-}
+} */
 
 @layer base {
   body {
@@ -30,23 +30,27 @@
   }
 
   h1 {
-    @apply text-4xl font-bold leading-loose lg:text-5xl
+    @apply text-5xl md:text-6xl font-bold leading-relaxed lg:leading-loose lg:text-7xl
   }
 
   h2 {
-    @apply text-3xl font-bold leading-loose lg:text-4xl
+    @apply text-4xl md:text-5xl font-bold leading-relaxed lg:leading-loose lg:text-6xl
   }
 
   h3 {
-    @apply text-2xl font-bold leading-loose lg:text-3xl
+    @apply text-3xl md:text-4xl font-bold leading-relaxed lg:leading-loose lg:text-5xl
   }
 
   h4 {
-    @apply text-xl font-bold leading-loose lg:text-2xl
+    @apply text-2xl font-bold leading-relaxed lg:leading-loose lg:text-4xl
   }
 
   h5 {
-    @apply text-lg font-bold leading-loose lg:text-xl
+    @apply text-xl font-bold leading-relaxed lg:leading-loose lg:text-3xl
+  }
+
+  h6 {
+    @apply text-lg font-bold leading-relaxed lg:leading-loose lg:text-2xl
   }
 }
 
@@ -71,12 +75,16 @@
     @apply h-full px-3 py-5 hover:bg-transparent hover:border-b-4 hover:border-secondary;
   }
 
+  .home-container-padding{ 
+    @apply  px-20 py-20 lg:px-6 lg:py-24 xl:px-20
+  }
+
   .home-container {
-    @apply  px-8 py-20 lg:px-36 lg:py-32 odd:bg-white even:bg-slate-50
+    @apply home-container-padding odd:bg-white even:bg-slate-50
   }
 
   .home-card-group{
-    @apply mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4
+    @apply mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
   }
 
   .arrowMove {

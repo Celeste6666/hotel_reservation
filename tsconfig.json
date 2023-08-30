@@ -22,9 +22,10 @@
     "paths": {
       "@/*": ["./*"],
       "@LIB/*": ["./lib/*"],
-      "@FE/*": ["./app/fe/*"],
-      "@BE/*": ["./app/be/*"],
-      "@ICON/*": ["./app/icons/*"]
+      "@ASSET/*": ["./assets/*"],
+      "@ICON/*": ["./icons/*"],
+      "@FE/*": ["./app/(fe)/*"],
+      "@BE/*": ["./app/(be)/*"]
     }
   },
   "include": [
