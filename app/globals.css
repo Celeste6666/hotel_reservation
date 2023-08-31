@@ -76,11 +76,15 @@
   }
 
   .home-container-padding{ 
-    @apply  px-20 py-20 lg:px-6 lg:py-24 xl:px-20
+    @apply py-20 lg:py-24
   }
 
   .home-container {
-    @apply home-container-padding odd:bg-white even:bg-slate-50
+    @apply home-container-padding odd:bg-white even:bg-slate-50 w-full flex justify-center
+  }
+
+  .home-inner-container {
+    @apply container overflow-clip 2xl:w-4/5
   }
 
   .home-card-group{
