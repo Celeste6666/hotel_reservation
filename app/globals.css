@@ -8,7 +8,8 @@
   --foreground-rgb      : 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb  : 255, 255, 255;
-  --font-base-size      : 20px
+  --font-base-size      : 20px;
+  --primary-color       : #EEC41E
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -75,7 +76,7 @@
     @apply h-full px-3 py-5 hover:bg-transparent hover:border-b-4 hover:border-secondary;
   }
 
-  .home-container-padding{ 
+  .home-container-padding {
     @apply py-20 lg:py-24
   }
 
@@ -84,10 +85,10 @@
   }
 
   .home-inner-container {
-    @apply container overflow-clip 2xl:w-4/5
+    @apply container overflow-clip
   }
 
-  .home-card-group{
+  .home-card-group {
     @apply mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
   }
 
@@ -95,3 +96,33 @@
     animation: arrowMove 3s ease-in-out 0s infinite;
   }
 }
+
+.swiper-slide >.card{
+  border-top-left-radius:  3rem !important;
+  border-bottom-right-radius:  3rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+
+.swiper-pagination{
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  /* background: var(--primary-color); */
+  border: 3px solid var(--primary-color);
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: opacity .5s, background-color .5s, width .5s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--primary-color);
+  transition-delay: 0s;
+}
+

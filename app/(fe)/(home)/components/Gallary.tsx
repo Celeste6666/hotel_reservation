@@ -16,7 +16,7 @@ const Gallary = (props: Props) => {
           <p className="w-25 text-slate-500">快樂的回憶永不消失</p>
         </div>
         <div className="mt-5 flex flex-wrap justify-between h-full">
-          <figure className="w-full lg:w-[32.5%] h-full rounded-tl-lg">
+          <figure className="w-full lg:w-[32.5%] rounded-tl-lg">
             <Image
               src={Apng}
               alt="A"
