@@ -21,7 +21,14 @@ const Testimonial = () => {
           <p className="w-25 text-slate-500">五星好評，物超所值</p>
         </div>
         <Swiper
-          slidesPerView={2}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768:{
+              slidesPerView:2
+            },
+          }}
           spaceBetween={30}
           pagination={true}
           modules={[Pagination]}

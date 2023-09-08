@@ -31,27 +31,27 @@
   }
 
   h1 {
-    @apply text-5xl md:text-6xl font-bold leading-relaxed lg:leading-loose lg:text-7xl
+    @apply text-5xl md:text-6xl font-bold leading-relaxed lg:leading-[5rem] lg:text-7xl
   }
 
   h2 {
-    @apply text-4xl md:text-5xl font-bold leading-relaxed lg:leading-loose lg:text-6xl
+    @apply text-4xl md:text-5xl font-bold leading-relaxed lg:leading-[5rem] lg:text-6xl
   }
 
   h3 {
-    @apply text-3xl md:text-4xl font-bold leading-relaxed lg:leading-loose lg:text-5xl
+    @apply text-3xl md:text-4xl font-bold leading-relaxed lg:leading-[5rem] lg:text-5xl
   }
 
   h4 {
-    @apply text-2xl font-bold leading-relaxed lg:leading-loose lg:text-4xl
+    @apply text-2xl font-bold leading-relaxed lg:leading-[5rem] lg:text-4xl
   }
 
   h5 {
-    @apply text-xl font-bold leading-relaxed lg:leading-loose lg:text-3xl
+    @apply text-xl font-bold leading-relaxed lg:leading-[5rem] lg:text-3xl
   }
 
   h6 {
-    @apply text-lg font-bold leading-relaxed lg:leading-loose lg:text-2xl
+    @apply text-lg font-bold leading-relaxed lg:leading-[5rem] lg:text-2xl
   }
 }
 
@@ -73,7 +73,11 @@
 
 @layer components {
   .nav-link {
-    @apply h-full px-3 py-5 hover:bg-transparent hover:border-b-4 hover:border-secondary;
+    @apply h-full px-3 py-5 hover:bg-transparent hover:border-b-4 hover:border-primary;
+  }
+  
+  .nav-border{
+    border: 2px solid rgba(255,255,255, 0.3)
   }
 
   .home-container-padding {
@@ -85,7 +89,7 @@
   }
 
   .home-inner-container {
-    @apply container overflow-clip
+    @apply max-w-sm md:container overflow-clip lg:px-24
   }
 
   .home-card-group {

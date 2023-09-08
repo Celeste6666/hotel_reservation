@@ -1,9 +1,21 @@
+"use client";
 import Image from "next/image";
+import { useScroll } from "ahooks";
 import NavbarContent from "./NavbarContent";
 import Logo from "@/assets/logo.png";
 export default function NavbarLayout() {
+  const scroll = useScroll(document) || { top: 0 };
+  console.log(
+    `w-full navbar  py-0 ${
+      scroll.top > 70 ? "bg-white sticky top-0" : "bg-transparent"
+    }`
+  );
   return (
-    <div className="w-full navbar bg-white py-0">
+    <div
+      className={`w-full navbar py-0 fixed top-0 z-10 transition duration-300  ${
+        scroll.top > 70 ? "bg-white text-dark shadow-md" : "bg-transparent text-white nav-border"
+      }`}
+    >
       <div className="flex-none lg:hidden">
         <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
           <svg

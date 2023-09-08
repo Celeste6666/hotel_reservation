@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Banner from "@ASSET/banner.jpg";
+import Banner from "@ASSET/banner2.jpg";
 import News from "@FE/(home)/components/News";
 import Location from "@FE/(home)/components/Location";
 import Recommend from "@FE/(home)/components/Recommend";
@@ -11,8 +11,8 @@ import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between w-full">
-      <div className="h-4/5 relative flex justify-start items-center bg-white w-full">
-        <figure className="h-[95vh] w-full">
+      <div className="h-full relative z-0 flex justify-start items-center bg-white w-full">
+        <figure className="h-[100vh] w-full">
           <Image
             src={Banner}
             alt="Sea"

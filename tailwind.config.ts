@@ -14,6 +14,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        '3xl': '0 0px 60px -15px rgba(0, 0, 0, 0.3)',
+      }
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
