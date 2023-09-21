@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Button, ConfigProvider } from "antd";
-import StyledComponentsRegistry from "@LIB/AntdRegistry";
-import theme from "../theme/themeConfig";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,11 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body suppressHydrationWarning={true}>
-        <StyledComponentsRegistry>
-          <ConfigProvider theme={theme}>{children}</ConfigProvider>
-        </StyledComponentsRegistry>
-      </body>
+      <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }

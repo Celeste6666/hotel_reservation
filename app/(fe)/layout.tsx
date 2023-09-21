@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import NavbarLayout from "@FE/components/navbar/NavbarLayout";
-import SideBar from "@FE/components/sideBar/SideBar";
+import NavbarLayout from "@COM/(fe)/navbar/NavbarLayout";
+import SideBar from "@COM/(fe)/sideBar/SideBar";
+import Footer from "@COM/(fe)/footer/Footer";
+import Breadcrumb from "@COM/(fe)/breadcrumb/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +23,9 @@ export default function RootLayout({
         <SideBar />
       </div>
       {/* Page content here */}
+      <Breadcrumb />
       {children}
+      <Footer />
     </>
   );
 }

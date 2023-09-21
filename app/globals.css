@@ -73,11 +73,15 @@
 
 @layer components {
   .nav-link {
-    @apply h-full px-3 py-5 hover:bg-transparent hover:border-b-4 hover:border-primary;
+    @apply h-full px-3 py-5 hover:border-b-4 hover:border-primary font-semibold ring-offset-1;
+  }
+
+  .nav-link.active {
+    @apply border-b-4 border-primary
   }
   
   .nav-border{
-    border: 2px solid rgba(255,255,255, 0.3)
+    border-bottom: 2px solid rgba(255,255,255, 0.3)
   }
 
   .home-container-padding {
