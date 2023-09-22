@@ -22,6 +22,10 @@
     "paths": {
       "@/*": ["./*"],
       "@LIB/*": ["./lib/*"],
+      "@COM/*": ["./components/*"],
+      "@CON/*": ["./constant/*"],
+      "@UTIL/*": ["./utils/*"],
+      "@STORE/*": ["./store/*"],
       "@ASSET/*": ["./assets/*"],
       "@ICON/*": ["./icons/*"],
       "@FE/*": ["./app/(fe)/*"],
