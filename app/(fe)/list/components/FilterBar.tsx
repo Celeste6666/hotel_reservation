@@ -1,9 +1,30 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, CSSProperties } from "react";
 
 const FilterBar = () => {
   return (
-    <div className="flex flex-col">
-      <div className="mt-5 p-3 flex flex-col card rounded-lg bg-base-100 shadow-xl hover:scale-105 transition duration-300">rangeFilter</div>
+    <section className="flex flex-col">
+      <div className="mt-5 p-5 flex flex-col items-center card rounded-lg bg-base-100 shadow-xl hover:scale-105 transition duration-300">
+        <div
+          className="range overflow-visible h-3 flex items-center rounded-none rounded-tl-2xl rounded-bl-2xl relative z-0 bg-zinc-200 w-full
+          before:w-8 before:h-8 before:bg-primary before:absolute before:rounded-full before:left-[0%] before:-translate-x-1/2 before:z-10
+          after:w-8 after:h-8 after:bg-primary after:absolute after:rounded-full after:right-[0%] after:translate-x-1/2 after:z-10"
+        ></div>
+        <div className="mt-5 w-full flex justify-between">
+          <span>最低價</span>
+          <input
+            type="number"
+            placeholder="請輸入"
+            className="input input-bordered input-sm"
+          />
+          <span>~</span>
+          <span>最高價</span>
+          <input
+            type="number"
+            placeholder="請輸入"
+            className="input input-bordered input-sm"
+          />
+        </div>
+      </div>
       <div className="mt-5 p-3 flex flex-col card rounded-lg bg-base-100 shadow-xl hover:scale-105 transition duration-300">
         <div className="form-control">
           <label className="cursor-pointer label">
@@ -68,7 +89,7 @@ const FilterBar = () => {
           </label>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
