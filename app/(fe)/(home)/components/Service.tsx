@@ -11,7 +11,7 @@ const Service = () => {
           <h2 className="text-center">我們提供的服務</h2>
           <p className="w-25 text-slate-500">快速便捷的預定系統</p>
         </div>
-        <div className="home-card-group gap-20 lg:grid-cols-4 lg:gap-5">
+        <div className="home-card-group py-10 gap-20 lg:grid-cols-4 lg:gap-5">
           <div className="p-8 flex flex-col items-center justify-between hover:bg-zinc-50 hover:rounded-2xl hover:shadow-lg">
             <House className="w-44 h-32 text-primary" />
             <h3 className="mt-6 mb-3">民宿預定</h3>
