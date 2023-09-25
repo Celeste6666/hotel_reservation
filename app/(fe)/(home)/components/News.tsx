@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Boat from "@ASSET/16.jpg";
-import Activity from "./Activity";
+import Activity from "./activity";
 
 type Props = {};
 

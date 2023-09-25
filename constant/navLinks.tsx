@@ -31,4 +31,14 @@ export const navLinks: NaveLink[] = [
     href: "/about",
     key: "about",
   },
+  {
+    name: "註冊",
+    href: "/register",
+    key: "register",
+  },
+  {
+    name: "登入",
+    href: "/login",
+    key: "login",
+  },
 ];

@@ -2,8 +2,10 @@
 import Image from "next/image";
 import { useScroll } from "ahooks";
 import NavbarContent from "./NavbarContent";
+import NavbarEnd from "./NavbarEnd";
 import Logo from "@/assets/logo.png";
 import { usePathname } from "next/navigation";
+
 export default function NavbarLayout() {
   const scroll = useScroll(document) || { top: 0 };
   const pathname = usePathname();
@@ -39,6 +41,7 @@ export default function NavbarLayout() {
           {/* <a className="btn btn-ghost normal-case text-xl">馬祖旅行網</a> */}
         </div>
         <NavbarContent pathname={pathname} />
+        <NavbarEnd />
       </div>
     </div>
   );

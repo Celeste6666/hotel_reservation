@@ -28,6 +28,7 @@
       "@STORE/*": ["./store/*"],
       "@ASSET/*": ["./assets/*"],
       "@ICON/*": ["./icons/*"],
+      "@HOOK/*": ["./hooks/*"],
       "@FE/*": ["./app/(fe)/*"],
       "@BE/*": ["./app/(be)/*"]
     }

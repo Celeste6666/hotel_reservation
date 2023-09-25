@@ -105,6 +105,12 @@
   }
 }
 
+@layer utilities {
+  .btn-primary{
+    @apply bg-primary text-white;
+  }
+}
+
 .swiper-slide >.card{
   border-top-left-radius:  3rem !important;
   border-bottom-right-radius:  3rem !important;

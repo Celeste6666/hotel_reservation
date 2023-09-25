@@ -4,10 +4,10 @@ export type SVGProps = {
 };
 
 export type RoomListFilterProps = {
-  start: number,
-  end: number,
-  location_ids: string[]
-}
+  start: number;
+  end: number;
+  location_ids: string[];
+};
 
 // data
 export type NaveLink = {
@@ -42,4 +42,11 @@ export type Hotel = {
 export type RoomDetail = Room & {
   description: string;
   devices: string[];
+};
+
+// User
+export type User = {
+  name?: string;
+  email: string;
+  hashed_password: string;
 };

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Banner from "@ASSET/banner2.jpg";
-import News from "@FE/(home)/components/News";
-import Location from "@FE/(home)/components/Location";
-import Recommend from "@FE/(home)/components/Recommend";
-import Gallary from "@FE/(home)/components/Gallary";
-import Service from "@FE/(home)/components/Service";
-import Testimonial from "@FE/(home)/components/Testimonial";
+import News from "./components/news";
+import Location from "./components/location";
+import Recommend from "./components/recommend";
+import Gallary from "./components/gallary";
+import Service from "./components/service";
+import Testimonial from "./components/testimonial";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {

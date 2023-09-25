@@ -1,5 +1,5 @@
 import Card from "@COM/(fe)/utils/Card";
-import LinkButton from "@COM/(fe)/utils/LinkButton";
+import LinkButton from "@/components/(fe)/utils/link-button";
 
 const Recommend = () => {
   const rooms = [

@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { query } from "@LIB/db";
+import { NextApiResponse } from "next";
 
 type ResponseData = {
   [prop: string]: any;
@@ -31,27 +32,39 @@ export async function POST(request: UserRequest) {
     );
 
     if (res.affectedRows > 0) {
-      return NextResponse.json({
-        code: 200,
-        message: "新增成功",
-        data: {
-          id,
-          name,
-          email,
+      return NextResponse.json(
+        {
+          code: 200,
+          isSuccess: true,
+          message: "新增成功",
+          data: {
+            id,
+            name,
+            email,
+          },
         },
-      });
+        { status: 200, statusText: "OK" }
+      );
     }
 
-    return NextResponse.json({
-      code: 400,
-      message: "新增成功",
-      data: null,
-    });
+    return NextResponse.json(
+      {
+        code: 400,
+        isSuccess: false,
+        message: "新增失敗",
+        data: null,
+      },
+      { status: 400, statusText: "FAIL" }
+    );
   } catch (err: any) {
-    return NextResponse.json({
-      code: 500,
-      message: err.message, // 錯誤訊息在這裡
-      data: null,
-    });
+    return NextResponse.json(
+      {
+        code: 500,
+        isSuccess: false,
+        message: err.message, // 錯誤訊息在這裡
+        data: null,
+      },
+      { status: 500, statusText: "Internal Server Error" }
+    );
   }
 }
