@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction, CSSProperties } from "react";
-
 const FilterBar = () => {
   return (
     <section className="flex flex-col">

@@ -5,9 +5,9 @@ function NavbarContent({ pathname }: { pathname: string }) {
   return (
     <div className="navbar-center py-0 hidden lg:flex">
       <ul className="px-1 text-lg py-0 flex flex-row">
-        {navLinks.map(({ name, href, key }) => {
+        {navLinks.map(({ name, href, key, isShow = true }) => {
           const isActive = pathname === href;
-          return (
+          return isShow ? (
             <li key={key}>
               <Link
                 className={`nav-link ${isActive ? "active" : ""}`}
@@ -16,6 +16,8 @@ function NavbarContent({ pathname }: { pathname: string }) {
                 {name}
               </Link>
             </li>
+          ) : (
+            <></>
           );
         })}
       </ul>

@@ -1,4 +1,4 @@
-import { NaveLink } from "@/types";
+import { NaveLink } from "@TYPES/types";
 
 export const navLinks: NaveLink[] = [
   {
@@ -35,10 +35,12 @@ export const navLinks: NaveLink[] = [
     name: "註冊",
     href: "/register",
     key: "register",
+    isShow: false,
   },
   {
     name: "登入",
-    href: "/login",
+    href: "/sign-in",
     key: "login",
+    isShow: false,
   },
 ];

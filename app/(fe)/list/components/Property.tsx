@@ -1,6 +1,6 @@
-import { Room, RoomListFilterProps } from "@/types";
+import { Room } from "@TYPES/room";
 import Card from "@COM/(fe)/utils/Card";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const rooms: Room[] = [
   {

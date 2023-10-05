@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Room } from "@/types";
+import { Room } from "@/types/hotel";
 import fakeImage from "@/assets/10.jpg";
 
 type Props = {

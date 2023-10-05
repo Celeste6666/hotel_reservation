@@ -29,6 +29,7 @@
       "@ASSET/*": ["./assets/*"],
       "@ICON/*": ["./icons/*"],
       "@HOOK/*": ["./hooks/*"],
+      "@TYPES/*": ["./types/*"],
       "@FE/*": ["./app/(fe)/*"],
       "@BE/*": ["./app/(be)/*"]
     }

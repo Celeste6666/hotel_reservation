@@ -5,9 +5,9 @@ import NavbarContent from "./NavbarContent";
 import NavbarEnd from "./NavbarEnd";
 import Logo from "@/assets/logo.png";
 import { usePathname } from "next/navigation";
-
 export default function NavbarLayout() {
-  const scroll = useScroll(document) || { top: 0 };
+  const isBrowser = () => typeof window !== "undefined";
+  const scroll = { top: 0 };
   const pathname = usePathname();
   return (
     <div

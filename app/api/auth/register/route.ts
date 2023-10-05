@@ -1,6 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { query } from "@LIB/db";
-import { NextApiResponse } from "next";
 
 type ResponseData = {
   [prop: string]: any;
@@ -35,7 +34,7 @@ export async function POST(request: UserRequest) {
       return NextResponse.json(
         {
           code: 200,
-          isSuccess: true,
+          ok: true,
           message: "新增成功",
           data: {
             id,
@@ -50,7 +49,7 @@ export async function POST(request: UserRequest) {
     return NextResponse.json(
       {
         code: 400,
-        isSuccess: false,
+        ok: false,
         message: "新增失敗",
         data: null,
       },
@@ -60,7 +59,7 @@ export async function POST(request: UserRequest) {
     return NextResponse.json(
       {
         code: 500,
-        isSuccess: false,
+        ok: false,
         message: err.message, // 錯誤訊息在這裡
         data: null,
       },

@@ -1,4 +1,4 @@
-import { SVGProps } from "@/types";
+import { SVGProps } from "@/types/hotel";
 
 const Chatting = ({ className }: SVGProps) => {
   return (

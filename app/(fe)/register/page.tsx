@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { SubmitButton } from "./components/submit-button";
 import getHashedPwd from "@LIB/getHashedPwd";
 import { redirect } from "next/navigation";
+import SubmitButton from "@COM/(fe)/utils/submit-button";
 import CardWithBg from "@COM/(fe)/utils/card-with-bg";
 
 const Register = () => {
@@ -20,8 +20,9 @@ const Register = () => {
       }),
     });
     const result = await res.json();
-    if (result.isSuccess) {
-      redirect("/login");
+    
+    if (result.ok) {
+      redirect("/sign-in");
     }
     // mutate data
     // revalidate cache
@@ -74,7 +75,7 @@ const Register = () => {
             <span className="label-text-alt text-danger">警告標語</span>
           </label>
         </div>
-        <SubmitButton />
+        <SubmitButton text="註冊" />
 
         <span className="mt-5">
           已經註冊過了？

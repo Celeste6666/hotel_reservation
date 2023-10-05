@@ -1,4 +1,4 @@
-import { SVGProps } from "@/types";
+import { SVGProps } from "@/types/hotel";
 
 const Car = ({ className }: SVGProps) => {
   return (
