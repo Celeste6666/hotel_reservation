@@ -4,14 +4,9 @@ import GitHubProvider from "next-auth/providers/github";
 import { query } from "@LIB/db";
 
 interface User {
-  ok: boolean;
-  code: number;
-  message: string;
-  data: {
-    id?: string;
-    name?: string;
-    email?: string;
-  } | null;
+  id: string;
+    name: string;
+    email: string;
 }
 
 export const options: NextAuthOptions = {
@@ -26,12 +21,18 @@ export const options: NextAuthOptions = {
     CredentialsProvider({
       id: "credentials",
       name: "credentials",
-      async authorize(credentials, req) {
+      credentials: {
+        email: { label: "Email", type: "email"},
+        pwd: { label: "password", type: "password"}
+      },
+      async authorize(credentials) {
         const { email, pwd } = credentials as {
           email: string;
           pwd: string;
         };
-        if (!email || !pwd) return null;
+        if (!email || !pwd) {
+          throw new Error("Invalid credentials")
+        };
         // 從資料庫獲取使用者資料去做驗證
         const res = await fetch(`${process.env.MY_URL}/api/auth/sign-in`, {
           method: "POST",
@@ -44,15 +45,16 @@ export const options: NextAuthOptions = {
           }),
         });
 
-        const user = (await res.json()) as User; // 因為用 fetch，所以一定要用 json 方法轉換
+        const result = await res.json(); // 因為用 fetch，所以一定要用 json 方法轉換
 
-        if (!user.ok) {
-          console.error("登录失败：", user.message); // 输出错误消息以进行调试
-          return null;
+        if (!result.ok) {
+          console.error("登录失败：", result.message); // 输出错误消息以进行调试
+          throw new Error(`Invalid credentials${result.message}`)
         }
-        return user;
+
+        const user = result.data as User;
+        return user; // 一定要 return 一個包含 id: string 的物件
       },
-      credentials: {},
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,

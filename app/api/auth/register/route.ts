@@ -13,17 +13,26 @@ type UserRequest = {
   };
 };
 
-export async function GET(request: NextRequest) {
-  const token = request.cookies.get("token");
-  return NextResponse.json({ code: 200, token });
-}
-
 export async function POST(request: UserRequest) {
   const { name, email, hashed_password } = await request.json();
   const id = crypto.randomUUID();
-  console.log("request", name, email, hashed_password);
 
   try {
+    const isEmailExist = await query(`SELECT email FROM users WHERE email=?`, [
+      email,
+    ]);
+    if (isEmailExist) {
+      return NextResponse.json(
+        {
+          code: 409,
+          ok: false,
+          message: "用戶已存在",
+          data: null,
+        },
+        { status: 409, statusText: "FAIL" }
+      );
+    }
+
     const res: ResponseData = await query(
       `INSERT INTO users (id, name, email, hashed_password )
       VALUES (?, ?, ?, ?)`,
@@ -42,7 +51,7 @@ export async function POST(request: UserRequest) {
             email,
           },
         },
-        { status: 200, statusText: "OK" }
+        { status: 201, statusText: "OK" }
       );
     }
 
