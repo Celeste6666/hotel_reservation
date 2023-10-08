@@ -15,7 +15,7 @@ type Props = {
   list: Array<Hotel>; // IHotel[] 是相同的意思表示
 };
 
-const Recommend = ({ list }: Props) => {
+const Location = ({ list }: Props) => {
   return (
     <section className="home-container">
       <div className="home-inner-container">
@@ -122,4 +122,4 @@ const Recommend = ({ list }: Props) => {
   );
 };
 
-export default Recommend;
+export default Location;

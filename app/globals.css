@@ -23,9 +23,7 @@
 @layer base {
   body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    background: white;
     font-size  : var(--font-base-size);
     font-family: 'cwTeXYen', sans-serif;
   }
@@ -72,6 +70,7 @@
 
 
 @layer components {
+  /* - 前台 */
   .nav-link {
     @apply h-full px-3 py-5 hover:border-b-4 hover:border-primary font-semibold ring-offset-1;
   }
@@ -102,6 +101,23 @@
 
   .arrowMove {
     animation: arrowMove 3s ease-in-out 0s infinite;
+  }
+
+  /* - 後台 */
+  .admin-nav-link {
+    @apply flex items-center flex-nowrap relative rounded-tl-full rounded-bl-full transition-none
+    hover:bg-white hover:text-primary
+    before:absolute before:w-5 before:h-5 before:-top-5 before:right-0 before:rounded-br-[20px] group-hover:before:shadow-[6px_6px_0px_5px_rgba(255,255,255,1)]
+    after:absolute after:w-5 after:h-5 after:-bottom-5 after:right-0 after:rounded-tr-[20px] group-hover:after:shadow-[6px_-6px_0px_5px_rgba(255,255,255,1)]
+  }
+  .admin-nav-link.active {
+    @apply bg-white text-primary before:shadow-[6px_6px_0px_5px_rgba(255,255,255,1)] after:shadow-[6px_-6px_0px_5px_rgba(255,255,255,1)] !important
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply hover:bg-transparent
   }
 }
 

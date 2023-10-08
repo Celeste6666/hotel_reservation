@@ -4,16 +4,17 @@ export type SVGProps = {
 };
 
 export type RoomListFilterProps = {
-  start: number,
-  end: number,
-  location_ids: string[]
-}
+  start: number;
+  end: number;
+  location_ids: string[];
+};
 
 // data
 export type NaveLink = {
   name: string;
   href: string;
   key: string;
+  icon?: ({ className }: { className: string }) => React.ReactNode;
 };
 
 export type Room = {
