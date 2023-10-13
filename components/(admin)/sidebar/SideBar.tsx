@@ -7,7 +7,7 @@ import {
   ArrowsPointingInIcon,
   ArrowsPointingOutIcon,
   ArrowRightOnRectangleIcon,
-} from "@heroicons/react/24/solid";
+} from "@heroicons/react/24/outline";
 import { admin_navLinks } from "@CON/navLinks";
 import { twMerge } from "tailwind-merge";
 import { usePathname } from "next/navigation";
@@ -18,11 +18,11 @@ const SideBar = (props: Props) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="admin-drawer">
+    <div className="absolute left-0 z-50 col-span-2">
       <div
         className={twMerge(
           "flex flex-col justify-between overflow-hidden menu p-4 pe-0 min-h-screen bg-primary text-white transition-all duration-300",
-          isOpen ? "w-64" : "w-24"
+          isOpen ? "w-80" : "w-24"
         )}
       >
         <ul>

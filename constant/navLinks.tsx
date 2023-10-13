@@ -9,7 +9,7 @@ import {
   MegaphoneIcon,
   IdentificationIcon,
   UsersIcon,
-} from "@heroicons/react/24/solid";
+} from "@heroicons/react/24/outline";
 
 export const navLinks: NaveLink[] = [
   {
@@ -108,6 +108,7 @@ export const admin_navLinks: NaveLink[] = [
     icon: ({ className }: { className: string }) => (
       <IdentificationIcon className={className} />
     ),
+    description: "創建角色以便將管理後臺使用者",
   },
   {
     name: "用戶管理",

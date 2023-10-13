@@ -106,9 +106,10 @@
   /* - 後台 */
   .admin-nav-link {
     @apply flex items-center flex-nowrap relative rounded-tl-full rounded-bl-full transition-none
+    active:bg-white active:text-primary
     hover:bg-white hover:text-primary
-    before:absolute before:w-5 before:h-5 before:-top-5 before:right-0 before:rounded-br-[20px] group-hover:before:shadow-[6px_6px_0px_5px_rgba(255,255,255,1)]
-    after:absolute after:w-5 after:h-5 after:-bottom-5 after:right-0 after:rounded-tr-[20px] group-hover:after:shadow-[6px_-6px_0px_5px_rgba(255,255,255,1)]
+    before:absolute before:w-5 before:h-5 before:-top-5 before:right-0 before:rounded-br-[20px] group-hover:before:shadow-[6px_6px_0px_5px_rgba(255,255,255,1)] group-active:before:shadow-[6px_6px_0px_5px_rgba(255,255,255,1)]
+    after:absolute after:w-5 after:h-5 after:-bottom-5 after:right-0 after:rounded-tr-[20px] group-hover:after:shadow-[6px_-6px_0px_5px_rgba(255,255,255,1)] group-active:after:shadow-[6px_-6px_0px_5px_rgba(255,255,255,1)] !important
   }
   .admin-nav-link.active {
     @apply bg-white text-primary before:shadow-[6px_6px_0px_5px_rgba(255,255,255,1)] after:shadow-[6px_-6px_0px_5px_rgba(255,255,255,1)] !important

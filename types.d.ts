@@ -15,6 +15,7 @@ export type NaveLink = {
   href: string;
   key: string;
   icon?: ({ className }: { className: string }) => React.ReactNode;
+  description?: string;
 };
 
 export type Room = {
