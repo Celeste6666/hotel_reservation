@@ -10,7 +10,7 @@ const NavHeader = () => {
     ({ href }) => href === pathname
   );
   return (
-    <div className="bg-primary bg-opacity-30 rounded-2xl py-8 px-5">
+    <div className="bg-primary-light rounded-2xl py-8 px-5 mb-5">
       <h4 className="leading-normal">{pageTitle?.name}</h4>
       <div>{pageTitle?.description}</div>
     </div>

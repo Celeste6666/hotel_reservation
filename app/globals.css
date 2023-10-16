@@ -114,6 +114,14 @@
   .admin-nav-link.active {
     @apply bg-white text-primary before:shadow-[6px_6px_0px_5px_rgba(255,255,255,1)] after:shadow-[6px_-6px_0px_5px_rgba(255,255,255,1)] !important
   }
+
+  .bg-primary-light {
+    @apply bg-primary bg-opacity-30 
+  }
+
+  .collapse-role.collapse-open > div {
+    @apply border border-zinc-100 shadow-sm rounded-lg p-2
+  }
 }
 
 @layer utilities {
