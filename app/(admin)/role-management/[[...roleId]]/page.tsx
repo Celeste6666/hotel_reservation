@@ -1,6 +1,9 @@
-import Tree from "@/components/(admin)/utils/Tree";
+"use client";
+import { useRef } from "react";
 import RoleCard from "./components/Role-Card";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import AddRoleBtn from "./components/Add-Role-Btn";
+import RoleSetting from "./components/Role-Setting";
+import Modal from "@COM/(admin)/utils/Modal";
 
 type Params = {
   params: {
@@ -8,45 +11,31 @@ type Params = {
   };
 };
 
-type TreeData = {
-  id: string;
-  title: string;
-  children?: TreeData[];
-};
-
-export default function page({ params }: Params) {
+export default function Page({ params }: Params) {
   console.log(params.roleId);
-  const treeData: TreeData[] = [
-    { id: "1", title: "首頁" },
-    { id: "2", title: "權限管理", children: [{ id: "21", title: "讀取" }, { id: "22", title: "寫入" }] },
-    { id: "3", title: "用戶管理", children: [{ id: "31", title: "讀取" }, { id: "32", title: "寫入" }] },
-    { id: "3", title: "用戶管理", children: [{ id: "31", title: "讀取" }, { id: "32", title: "寫入" }] },
-  
-    { id: "3", title: "用戶管理", children: [{ id: "31", title: "讀取" }, { id: "32", title: "寫入" }] },
-
-    { id: "3", title: "用戶管理", children: [{ id: "31", title: "讀取" }, { id: "32", title: "寫入" }] },
-
-    { id: "3", title: "用戶管理", children: [{ id: "31", title: "讀取" }, { id: "32", title: "寫入" }] },
-
-  ];
+  const modalRef = useRef<HTMLDialogElement | null>(null);
   return (
     <>
-      <div className="col-span-1 border-e px-5 py-8 flex flex-col">
+      <div className="col-span-3 lg:col-span-1 border-e px-5 py-8 flex flex-col">
         <input
           type="text"
           placeholder="Type here"
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full"
         />
-        <p className="text-lg font-semibold mt-5 mb-1">所有角色</p>
-        <RoleCard />
-      </div>
-      <div className="col-span-2">
-        <div className="border-b p-4 flex justify-between items-center">
-          <Bars3Icon className="w-7 h-7" />
-          <button className="btn btn-warning btn-sm text-white">新增角色</button>
+        <div className="text-lg font-semibold mt-5 mb-1 flex justify-between lg:block">
+          <span>所有角色</span>
+          <AddRoleBtn className="inline lg:hidden" />
         </div>
-        <Tree<TreeData> treeData={treeData} />
+        <div className="card-group flex flex-col mt-2">
+          <RoleCard />
+        </div>
       </div>
+      <div className="hidden lg:flex lg:flex-col lg:col-span-2">
+        <RoleSetting />
+      </div>
+      <Modal ref={modalRef} isModalOpen={params.roleId ? true : false}>
+        <RoleSetting />
+      </Modal>
     </>
   );
 }

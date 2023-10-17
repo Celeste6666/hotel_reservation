@@ -6,8 +6,9 @@ import { NaveLink } from "@/types";
 const NavHeader = () => {
   // 获取当前路由的 pathname
   const pathname = usePathname();
-  const pageTitle: NaveLink | undefined = admin_navLinks.find(
-    ({ href }) => href === pathname
+  console.log(pathname);
+  const pageTitle: NaveLink | undefined = admin_navLinks.find(({ href }) =>
+    pathname.includes(href)
   );
   return (
     <div className="bg-primary-light rounded-2xl py-8 px-5 mb-5">

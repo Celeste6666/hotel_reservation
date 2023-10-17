@@ -24,7 +24,6 @@ interface TreeChild<U> {
 }
 
 function TreeChild<U>({ data, className }: TreeChild<U>): ReactNode {
-  console.log(data);
   return (
     <div className="form-control" key={data.id}>
       <label className="cursor-pointer label justify-start">
@@ -55,7 +54,6 @@ function TreeNode<T>({ data, children, className }: TreeNode<T>): ReactNode {
 export default function Tree<T extends Data>({
   treeData = [],
 }: IProps<T>): ReactNode {
-  console.log(treeData);
 
   const renderChildren = (data: T | Data, index: number) => {
     return <div className="">
@@ -67,7 +65,7 @@ export default function Tree<T extends Data>({
   };
 
   return (
-    <div className={twMerge("collapse collapse-open grid-cols-4 gap-x-3 gap-y-5 py-0 p-4 collapse-role")}>
+    <div className={twMerge("collapse collapse-open grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-3 gap-y-5 py-0 p-4 collapse-role")}>
       {treeData.map(renderChildren)}
     </div>
   );
