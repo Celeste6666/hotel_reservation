@@ -12,6 +12,7 @@ const Modal = ({ ref, isModalOpen, children }: Props) => {
   return (
     <dialog className="modal lg:hidden" ref={ref} open={open}>
       <div className="modal-box">
+        <h3 className="font-bold text-lg mb-3">Hello!</h3>
         <form method="dialog">
           {/* if there is a button in form, it will close the modal */}
           <button

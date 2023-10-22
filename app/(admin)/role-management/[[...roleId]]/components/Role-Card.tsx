@@ -7,7 +7,7 @@ const RoleCard = () => {
       <input
         type="checkbox"
         checked={true}
-        className="checkbox rounded-full me-3"
+        className="checkbox rounded-full me-3 checkbox-primary"
       />
       <div className="card rounded-lg w-full h-full xl:bg-primary-light ">
         <div className="card-body px-4 py-2 ">

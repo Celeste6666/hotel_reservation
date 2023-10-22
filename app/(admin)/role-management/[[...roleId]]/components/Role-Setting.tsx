@@ -66,9 +66,9 @@ const treeData: TreeData[] = [
 const RoleSetting = () => {
   return (
     <>
-      <div className="border-b p-4 flex justify-between items-center">
-        <Bars3Icon className="hidden lg:inline w-7 h-7" />
-        <AddRoleBtn className="hidden lg:inline" />
+      <div className="border-b flex justify-between items-center">
+        <Bars3Icon className="hidden lg:inline w-7 h-7 ms-4" />
+        <AddRoleBtn className="hidden lg:inline my-4 me-4" />
       </div>
       <Tree<TreeData> treeData={treeData} />
     </>
