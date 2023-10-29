@@ -44,7 +44,10 @@ const SideBar = (props: Props) => {
             </Link>
           </li>
           {admin_navLinks.map(({ href, name, key, icon }) => (
-            <li className="my-1 group" key={key}>
+            <li
+              className="my-1 group  rounded-tl-full rounded-bl-full  hover:bg-white hover:text-primary"
+              key={key}
+            >
               <Link
                 href={href}
                 className={twMerge(
